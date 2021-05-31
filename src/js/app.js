@@ -13,3 +13,6 @@ new Vue({
     },
   },
 });
+
+//https://www.youtube.com/watch?v=FgvjjYBP2A0&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=9
+//L8 Two-way data binding
