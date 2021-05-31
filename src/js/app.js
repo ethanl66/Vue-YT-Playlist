@@ -2,15 +2,17 @@ console.log("Connected");
 
 //Create Vue Instance
 new Vue({
-  el: "#vue-app", //controls everything in this
+  el: "#vue-app",
   data: {
-    name: "Shaun", //{{name}} in html will output this data
+    name: "Shaun",
     job: "Ninja",
+    website: "http://www.thenetninja.co.uk", //requires v-bind: on attributes. Shorthand ':'. Doesn't require {{}}
+    websiteTag:
+      '<a href="http://www.thenetninja.co.uk">The Net Ninja Website</a>', //v-html: for binding html elements
   },
   methods: {
     greet: function (time) {
-      //this.name; can access all the data in this function
-      return "Good " + time + " " + this.name; //specified afternoon parameter in HTML
+      return "Good " + time + " " + this.name;
     },
   },
 });
