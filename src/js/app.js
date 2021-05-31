@@ -3,24 +3,13 @@ console.log("Connected");
 //Create Vue Instance
 new Vue({
   el: "#vue-app",
-  data: {
-    age: 25,
-    x: 0,
-    y: 0,
-  },
+  data: {},
   methods: {
-    add: function (inc) {
-      this.age += inc; // ADDING MODIFIERS v-on:click.once, v-on:click.prevent
+    logName: function () {
+      console.log("You entered a name"); //Key events and stackable modifiers in HTML, on:keyup.alt.enter
     },
-    subtract: function (dec) {
-      this.age -= dec;
-    },
-    updateXY: function (event) {
-      this.x = event.offsetX;
-      this.y = event.offsetY;
-    },
-    click: function () {
-      alert("You clicked");
+    logAge: function () {
+      console.log("You entered an age");
     },
   },
 });
