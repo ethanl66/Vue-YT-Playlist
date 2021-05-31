@@ -1,3 +1,27 @@
+//Template CSS
+* {
+  box-sizing: border-box;
+}
+html,
 body {
-  background-color: red;
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+
+  background-color: green;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+//Video CSS
+#canvas {
+  width: 60rem;
+  padding: 20rem 2rem;
+  text-align: center;
+  border: 1px solid #333;
+
+  background-color: white;
+  margin: 2rem;
 }
