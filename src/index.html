@@ -7,36 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.scss/">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <title>Vue.js Tutorial L11</title>
+    <title>Vue.js Punchbag Game</title>
 
 </head>
 
 <body>
     <div id="vue-app">
-        <h1>Looping Through Lists</h1>
-        <ul>
-            <li v-for="character in characters"> {{character}}</li>
-            <!--(param) in [data property]-->
-        </ul>
-        <ul>
-            <li v-for="(ninja, index) in ninjas">{{index}}. {{ninja.name}} - {{ninja.age}} yrs</li>
-            <!--array of objects-->
-        </ul>
-        <!-- Doesn't have to be for li tags -->
+        <!-- Bag Image -->
+        <div id="bag" v-bind:class="{burst: ended}"></div>
 
-        <template v-for="(ninja, index) in ninjas">
-            <h3>{{index}}. {{ninja.name}}</h3>
-            <p>{{ninja.age}}</p>
-        </template>
-        <!-- template for a cleaner markup in place of div-->
+        <!-- Bag Health -->
+        <div id="bag-health">
+            <div v-bind:style="{width: health + '%'}"></div>
+        </div>
 
-        <template v-for="ninja in ninjas">
-            <!--access single ninja object-->
-            <div v-for="(val,key) in ninja">
-                <!--cycles through single ninja object with a double v-for. Doesn't requrie the name of the keys-->
-                <p>{{key}} - {{val}}</p>
-            </div>
-        </template>
+        <!-- Game Controls -->
+        <div id="controls">
+            <button v-on:click="punch" v-show="!ended">Punch</button>
+            <button v-on:click="restart">Restart Game</button>
+        </div>
+
 
     </div>
 

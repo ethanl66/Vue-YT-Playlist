@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-size: 62.5%;
 
-  background-color: rgb(121, 121, 121);
+  background-color: rgb(149, 149, 149);
 }
 
 body {
@@ -16,19 +16,29 @@ body {
 }
 
 //Video CSS
-span {
-  background: red;
-  display: inline-block;
-  padding: 10px;
-  color: #fff;
-  margin: 10px 0;
+#bag {
+  width: 20rem;
+  height: 50rem;
+  margin: 0 auto;
+  background: url(/src/img/bag.png) center no-repeat;
+  background-size: 80%;
+}
+#bag.burst {
+  background: url(/src/img/bag-burst.png) center no-repeat;
+  background-size: 80%;
 }
 
-.available span {
-  background: green;
+#bag-health {
+  width: 20rem;
+  border: 2px solid black;
+  margin: 0 auto 2rem auto;
+}
+#bag-health div {
+  height: 2rem;
+  background: crimson;
 }
 
-.nearby span:after {
-  content: "nearby";
-  margin-left: 10px;
+#controls {
+  width: 16rem;
+  margin: 0 auto;
 }
