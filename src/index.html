@@ -7,28 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.scss/">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <title>Vue.js Tutorial L2</title>
+    <title>Vue.js Tutorial L11</title>
 
 </head>
 
 <body>
     <div id="vue-app">
-        <h1>Dynamic CSS</h1>
+        <h1>Conditionals</h1>
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+        <!--         <p v-if="error">There has been an error</p>
+        <p v-else-if="success">There has been a success</p> -->
+        <!--Do only if error is false and success is true-->
 
-        <h2>Example 1</h2>
-        <div v-on:click="available = !available" v-bind:class="{available: available}">
-            <!--negates true and false-->
-            <span>Ryu</span>
-        </div>
-        <!--second one refers to data object in vue instance-->
-
-        <h2>Example 2</h2>
-        <button v-on:click="nearby = !nearby">Toggle nearby</button>
-        <button v-on:click="available = !available">Toggle available</button>
-        <div v-bind:class="compClasses">
-            <span>Ryu</span>
-        </div>
-
+        <p v-show="error">There has been an error</p>
+        <p v-show="success">There has been a success</p>
+        <!--v-show only gives it a style of display:none, instead of commenting it out-->
     </div>
 
     <script src="js/app.js"></script>
