@@ -13,16 +13,31 @@
 
 <body>
     <div id="vue-app">
-        <h1>Conditionals</h1>
-        <button v-on:click="error = !error">Toggle Error</button>
-        <button v-on:click="success = !success">Toggle Success</button>
-        <!--         <p v-if="error">There has been an error</p>
-        <p v-else-if="success">There has been a success</p> -->
-        <!--Do only if error is false and success is true-->
+        <h1>Looping Through Lists</h1>
+        <ul>
+            <li v-for="character in characters"> {{character}}</li>
+            <!--(param) in [data property]-->
+        </ul>
+        <ul>
+            <li v-for="(ninja, index) in ninjas">{{index}}. {{ninja.name}} - {{ninja.age}} yrs</li>
+            <!--array of objects-->
+        </ul>
+        <!-- Doesn't have to be for li tags -->
 
-        <p v-show="error">There has been an error</p>
-        <p v-show="success">There has been a success</p>
-        <!--v-show only gives it a style of display:none, instead of commenting it out-->
+        <template v-for="(ninja, index) in ninjas">
+            <h3>{{index}}. {{ninja.name}}</h3>
+            <p>{{ninja.age}}</p>
+        </template>
+        <!-- template for a cleaner markup in place of div-->
+
+        <template v-for="ninja in ninjas">
+            <!--access single ninja object-->
+            <div v-for="(val,key) in ninja">
+                <!--cycles through single ninja object with a double v-for. Doesn't requrie the name of the keys-->
+                <p>{{key}} - {{val}}</p>
+            </div>
+        </template>
+
     </div>
 
     <script src="js/app.js"></script>
