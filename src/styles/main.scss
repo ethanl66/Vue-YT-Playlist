@@ -16,29 +16,3 @@ body {
 }
 
 //Video CSS
-#bag {
-  width: 20rem;
-  height: 50rem;
-  margin: 0 auto;
-  background: url(/src/img/bag.png) center no-repeat;
-  background-size: 80%;
-}
-#bag.burst {
-  background: url(/src/img/bag-burst.png) center no-repeat;
-  background-size: 80%;
-}
-
-#bag-health {
-  width: 20rem;
-  border: 2px solid black;
-  margin: 0 auto 2rem auto;
-}
-#bag-health div {
-  height: 2rem;
-  background: crimson;
-}
-
-#controls {
-  width: 16rem;
-  margin: 0 auto;
-}
