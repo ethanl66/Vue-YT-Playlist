@@ -1,24 +1,14 @@
 console.log("Connected");
 
-Vue.component("greeting", {
-  template:
-    "<p>I am  {{name}}. <button v-on:click='changeName'>Change name</button></p>",
-  data: function () {
-    return {
-      name: "Yoshi",
-    };
+new Vue({
+  el: "#vue-app",
+  data: {
+    output: "Your favorite food",
   },
   methods: {
-    changeName: function () {
-      this.name = "Mario";
+    readRefs: function () {
+      console.log(this.$refs.test.innerHTML);
+      this.output = this.$refs.input.value;
     },
   },
-});
-
-new Vue({
-  el: "#vue-app-one",
-});
-
-new Vue({
-  el: "#vue-app-two",
 });
