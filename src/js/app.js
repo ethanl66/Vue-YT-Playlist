@@ -12,3 +12,6 @@ new Vue({
     },
   },
 });
+
+// Lesson 18 Vue Files and Root Component
+//https://www.youtube.com/watch?v=yP5Tu3S_FtU&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=19
